@@ -53,9 +53,21 @@ ul {
   padding: 0;
 }
 
-.page-header {
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+
+.header {
   border-bottom: 1px solid var(--borders-color);
 }
+
 
 .container {
   width: 1200px;
@@ -67,19 +79,20 @@ ul {
 .flex-container,
 .flex {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-/* Для ссылок падинги */
-.link,
-.nav-contacts {
+/* Для ссылок падинги  .link*/
+.nav__link,
+.contacts__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
 /* Отступ от логотипа */
-.site-nav {
+.nav-list {
   margin-left: 93px;
 }
 
@@ -94,23 +107,17 @@ ul {
 }
 
 /* Текст Studio */
-.logo-header {
+.header__logo {
   color: var(--logo-header);
 }
 
-.logo-footer {
+.footer__logo {
   color: var(--logo-footer);
 }
 
-/* Сброс точек списка */
-.list,
-.buttons.list,
-.projects.list {
-  list-style: none;
-}
 
 /* Меню навигации */
-.link,
+.nav__link,
 .nav-contacts {
   font-weight: 500;
   line-height: 1.14;
@@ -121,30 +128,32 @@ ul {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Отступы в новигации */
-/* .site-nav .item:not(:last-child) {
-margin-right: 50px;
-} */
-.site-nav > .item + .item,
+
+
 .flex > .item + .item {
   margin-left: 50px;
 }
 
+/* Не работает */
+
+.nav__list {
+  gap: 50px;
+  margin-left: 91px;
+} 
 /* Ссылки в навигации */
-.logo,
-.accent {
-  text-decoration: none;
-}
 
 /* Цвет наведения на ссылку*/
-.active,
-.accent:hover,
-.accent:focus {
+.nav__link--active,
+.nav__link--accent:hover,
+.nav__link--accent:focus,
+.contacts__link--accent,
+.contacts__link:hover,
+.contacts__link:focus {
   color: var(--accent-color);
 }
 
-.nav-contacts,
-.nav-contacks-icon {
+.contacts__link,
+.contacks__icon {
   color: var(--priority-text-color);
 
   transition-property: color;
@@ -152,27 +161,24 @@ margin-right: 50px;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* {
-    fill: var(--priority-text-color)
-} */
-
-.contact-icon:hover .nav-contacks-icon,
-.contact-icon:focus .nav-contacks-icon {
+.contacts__link:hover .contacts__icon,
+.contacts__link:focus .contacts__icon {
   fill: var(--accent-color);
 }
 /* Выравнивание у левому краю */
 .contacts {
   margin-left: auto;
+  gap: 30px;
 }
 
 /* Подчёркивание ссылок с низу через ::after */
 
-.position-relative {
+.nav__item--position-relative {
   display: inline-block;
   position: relative;
 }
 
-.link-hover::after {
+.nav__link--after::after {
   display: block;
   position: absolute;
   content: "";
@@ -193,7 +199,7 @@ margin-right: 50px;
   
   } */
 
-.contact-icon {
+.contacts__link {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -220,7 +226,7 @@ margin-right: 50px;
   background-repeat: no-repeat;
 }
 
-.hero-title {
+.hero__title {
   width: 696px;
   margin-left: auto;
   margin-right: auto;
@@ -234,7 +240,7 @@ margin-right: 50px;
 }
 
 /* Кнопка */
-.hero-button {
+.button {
   min-width: 216px;
   display: inline-block;
   padding: 10px 32px;
@@ -254,7 +260,8 @@ margin-right: 50px;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-button:active {
+.button:active,
+.btn-footer-send:active {
   background: var(--hero-button-active);
 }
 
@@ -265,7 +272,7 @@ margin-right: 50px;
 }
 
 /* Заголовки секций h2 */
-.section-title {
+.section__title {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
@@ -288,20 +295,19 @@ margin-right: 50px;
 }
 
 /* Особливості  сброс нижнего паддинга*/
-.no-padding-bottom {
-  padding-bottom: 0;
+
+.features-list {
+  display: flex;
+    padding-bottom: 0;
+    align-items: normal;
+    justify-content: space-between;
+
 }
 
-.no-center {
-  align-items: normal;
-}
 
 /* Иконки секции Особливості через SVG*/
 
-.peculiarities-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.wrapper-icon {
   height: 120px;
   border-radius: 4px;
   margin-bottom: 30px;
@@ -336,7 +342,7 @@ margin-right: 50px;
 } */
 
 /* Заголовки h3 Секции "Особенности"*/
-.peculiarities-subtitle {
+.features-list__subtitle {
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.14;
@@ -345,17 +351,16 @@ margin-right: 50px;
 }
 
 /* текст Секции "Особенности" */
-.peculiarities-text {
+.features-list__text {
   width: 270px;
   line-height: 1.7;
 }
 
 /* Секция Чим ми займаемося */
-/* Снятие пробела у фото */
-.img-block {
-  display: block;
+.our-work__list {
+  gap: 30px;
 }
-.alignment,
+
 .team-list,
 .clients-list {
   justify-content: space-between;
@@ -518,7 +523,8 @@ margin-right: 50px;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.svg-contact-icon {
+/* .svg-contact-icon { */
+  .contacts__icon {
   fill: var(--priority-text-color);
 
   transition-property: fill;
@@ -585,7 +591,7 @@ margin-right: 50px;
 /* Форма  Підпишіться на розсилку*/
 
 .footer-form-mail {
-  width: 358px;
+  width: 570px;
   line-height: calc(20 / 16);
 }
 
@@ -629,7 +635,7 @@ margin-right: 50px;
   align-items: center;
   width: 200px;
   height: 50px;
-  background: #2196f3;
+  background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
@@ -1070,19 +1076,24 @@ margin-right: 50px;
   opacity: 1;
 }
 
-/* .input-mail:placeholder-shown {
-  font-size: 16px;
-line-height: 20px;
 
-display: flex;
-align-items: center;
-letter-spacing: 0.03em;
 
-color: rgba(255, 255, 255, 0.6);
-
+.input-mail:not(:placeholder-shown):required:valid {
+  border-color: var(--accent-color);
+  background: var(--hero-footer-background);
+  color: rgba(255, 255, 255, 0.6);
 
 }
+.input-mail:not(:placeholder-shown):required:invalid {
+  border-color: red;
+  background: var(--hero-footer-background);
+  color: rgba(255, 255, 255, 0.6);
+}
+.input-mail:focus-within {
+  border-color: #2196f3;
+}
 
-.input-mail:not(:placeholder-shown) {
-  border: 1px solid var(--accent-color);
-} */
+.input-mail:focus-within {
+  color: rgba(255, 255, 255, 0.6);
+  border-color: #2196f3;
+}
