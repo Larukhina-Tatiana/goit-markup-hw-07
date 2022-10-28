@@ -636,9 +636,7 @@ img {
 /* Страница Портфолио */
 /* Кнопки */
 .btn-flex {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 .portfolio-button {
   display: inline-block;
@@ -678,13 +676,13 @@ img {
 
 /*  Синий оверлей*/
 
-.project-description-container {
+.project__description-container {
   position: relative;
   cursor: pointer;
   overflow: hidden;
 }
 
-.project-description-text {
+.project__description-text {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -708,8 +706,8 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-.project:hover .project-description-text,
-.project:focus .project-description-text {
+.project__item:hover .project__description-text,
+.project__item:focus .project__description-text {
   transform: translateY(0);
 }
 
@@ -721,26 +719,26 @@ img {
     box-shadow: var(--portfolio-box-shadow);
 } */
 /* flex-container */
-.projects {
+.project {
   flex-wrap: wrap;
-  /* margin: -15px; */
+   /* margin: -15px; */
 }
 
-.project-link {
+.project__link {
   display: block;
   text-decoration: none;
   list-style: none;
   color: var(--priority-text-color);
 }
 
-.project-caption {
+.project__caption {
   padding: 20px 24px;
   border-right: 1px solid var(--project-border);
   border-left: 1px solid var(--project-border);
   border-bottom: 1px solid var(--project-border);
 }
 /* Заголовки h2 Проектов */
-.projects-title {
+.project__title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -748,14 +746,14 @@ img {
   margin-bottom: 4px;
 }
 
-.projects-text,
-.project-link:visited,
-.project-link {
+.project__text,
+.project__link:visited,
+.project__link {
   font-size: 16px;
   line-height: 1.87;
 }
 
-.projects__item {
+.project__item {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
@@ -765,20 +763,20 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects__item:hover,
-.projects__item:focus {
+.project__item:hover,
+.project__item:focus {
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* Каждый третий */
-.projects__item:nth-child(3n) {
+.project__item:nth-child(3n) {
   margin-right: 0;
 }
 
 /* Последние 3 элемента */
-.projects__item:nth-last-child(-n + 3) {
+.project__item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 
