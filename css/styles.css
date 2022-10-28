@@ -85,7 +85,7 @@ img {
 
 /* Для ссылок падинги  .link*/
 .nav__link,
-.contacts__link {
+.contacts-list__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -129,10 +129,10 @@ img {
 }
 
 
-
+/* 
 .flex > .item + .item {
   margin-left: 50px;
-}
+} */
 
 /* Не работает */
 
@@ -146,14 +146,14 @@ img {
 .nav__link--active,
 .nav__link--accent:hover,
 .nav__link--accent:focus,
-.contacts__link--accent,
-.contacts__link:hover,
-.contacts__link:focus {
+.contacts-list__link--accent,
+.contacts-list__link:hover,
+.contacts-list__link:focus {
   color: var(--accent-color);
 }
 
-.contacts__link,
-.contacks__icon {
+.contacts-list__link,
+.contacts-list__icon {
   color: var(--priority-text-color);
 
   transition-property: color;
@@ -161,12 +161,12 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts__link:hover .contacts__icon,
-.contacts__link:focus .contacts__icon {
+.contacts-list__link:hover .contacts-list__icon,
+.contacts-list__link:focus .contacts-list__icon {
   fill: var(--accent-color);
 }
 /* Выравнивание у левому краю */
-.contacts {
+.contacts-list {
   margin-left: auto;
   gap: 30px;
 }
@@ -199,7 +199,7 @@ img {
   
   } */
 
-.contacts__link {
+.contacts-list__link {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -366,12 +366,12 @@ img {
   justify-content: space-between;
 }
 
-.img-container {
+.our-work__container {
   position: relative;
   overflow: hidden;
 }
 
-.img-content {
+.our-work__text {
   position: absolute;
   width: 100%;
   height: 70px;
@@ -397,7 +397,7 @@ img {
   background-color: var(--team-background);
 }
 
-.team-card {
+.team-list__item {
   width: 270px;
   /* height: 368px; */
   background: var(--page-background);
@@ -405,11 +405,11 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.caption {
+.team-list__caption {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.team-subtitle {
+.team-list__subtitle {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -418,14 +418,14 @@ img {
   color: var(--title-text-color);
 }
 
-.team-text {
+.team-list__text {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   margin-bottom: 16px;
 }
 
-.team-card-social-link {
+.social-list {
   justify-content: center;
   gap: 10px;
 }
@@ -436,8 +436,7 @@ img {
 }
 
 /* Соцсети  Наша команда*/
-.team-link,
-.footer-social-link {
+.social-list__link {
   width: 44px;
   height: 44px;
   display: flex;
@@ -446,7 +445,7 @@ img {
   border-radius: 50%;
 }
 
-.team-link {
+.social-list__link {
   background: var(--page-background);
 
   transition-property: background;
@@ -454,45 +453,42 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-link {
+.social-list__link--bg {
   background-color: rgba(255, 255, 255, 0.1);
 
-  transition-property: background-color;
+  /* transition-property: background-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
-.footer-social-link:hover,
+/* .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--accent-color);
-}
-.team-link:hover,
-.team-link:focus {
+} */
+.social-list__link:hover,
+.social-list__link:focus {
   background-color: var(--accent-color);
 }
 
-.social-link {
+.social-list__svg {
   fill: var(--clients);
 
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-link:hover,
-.social-link:focus {
+.social-list__svg:hover,
+.social-list__svg:focus {
   fill: var(--logo-footer);
 }
-.team-link:hover .social-link,
-.team-link:focus .social-link {
+.social-list__link:hover .social-list__svg,
+.social-list__link:focus .social-list__svg {
   fill: var(--logo-footer);
 }
 
 /* Секция Постійні клієнти */
 
 /* a */
-.card-accent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.clients-list__link {
   width: 170px;
   height: 92px;
   border: 1px solid var(--clients);
@@ -503,19 +499,18 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-accent:hover .card-accent-icon,
-.card-accent:focus .card-accent-icon {
+.clients-list__link:hover .clients-list__icon,
+.clients-list__link:focus .clients-list__icon {
   fill: var(--accent-color);
 }
 
-.card-accent:hover,
-.card-accent:focus {
+.clients-list__link:hover,
+.clients-list__link:focus {
   border: 1px solid var(--accent-color);
 }
 
 /* Секция Наша команда svg без ховера */
-.contact-icon,
-.card-accent-icon {
+.clients-list__icon {
   fill: var(--clients);
 
   transition-property: fill;
@@ -532,14 +527,14 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-accent:hover,
-.card-accent:focus,
-.card-accent-icon:hover,
-.card-accent-icon:focus {
+.clients-list__link:hover,
+.clients-list__link:focus,
+.clients-list__link-icon:hover,
+.clients-list__icon:focus {
   fill: var(--accent-color);
 }
-.clients-card:hover .card-accent-icon,
-.clients-card:focus .card-accent-icon {
+.clients-list__item:hover .clients-list__icon,
+.clients-list__item:focus .clients-list__icon {
   fill: var(--accent-color);
 }
 
@@ -553,18 +548,17 @@ img {
   margin-top: 20px;
 }
 
-.address-indent {
+.address__item--margin {
   margin-top: 9px;
 }
-.address-link,
-.footer-contacts {
+.address__link {
   font-style: normal;
   line-height: 1.7;
   color: var(--logo-footer);
   text-decoration: none;
 }
 
-.footer-contacts {
+.address__link--color {
   color: var(--address-color);
 
   transition-property: color;
@@ -572,9 +566,10 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
 /* Приєднуйтесь */
 
-.footer-text {
+.footer__text {
   font-weight: 700;
   line-height: calc(16 / 14);
   text-transform: uppercase;
@@ -583,8 +578,8 @@ img {
   margin-bottom: 20px;
 }
 
-.team-link:hover,
-.team-link:focus {
+.social-list__link:hover,
+.social-list__link:focus {
   fill: var(--logo-footer);
 }
 
@@ -595,21 +590,20 @@ img {
   line-height: calc(20 / 16);
 }
 
-.footer-form-mail:hover .input-mail,
-.footer-form-mail:focus .input-mail {
+.form-mail:hover .input-mail,
+.form-mail:focus .input-mail {
   border: 1px solid var(--accent-color);
 }
 
 .modal-container {
   display: flex;
   width: 570px;
-  /* height: 86px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.input-mail {
+.form-mail__input {
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -621,8 +615,8 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.input-mail:hover,
-.input-mail:focus {
+.form-mail__input:hover,
+.form-mail__input:focus {
   border: 1px solid var(--accent-color);
   transition-property: border;
   transition-duration: 250ms;
@@ -651,7 +645,7 @@ img {
   color: var(--page-background);
 }
 
-.send-icon {
+.btn-footer-send__icon {
   fill: var(--page-background);
   margin-left: 10px;
 }
@@ -805,10 +799,6 @@ img {
   margin-bottom: 0;
 }
 
-.team-card-social-list,
-.footer-social-list {
-  justify-content: center;
-}
 
 .footer .container {
   display: flex;
@@ -1078,22 +1068,22 @@ img {
 
 
 
-.input-mail:not(:placeholder-shown):required:valid {
+.form-mail__input:not(:placeholder-shown):required:valid {
   border-color: var(--accent-color);
   background: var(--hero-footer-background);
   color: rgba(255, 255, 255, 0.6);
 
 }
-.input-mail:not(:placeholder-shown):required:invalid {
+.form-mail__input:not(:placeholder-shown):required:invalid {
   border-color: red;
   background: var(--hero-footer-background);
   color: rgba(255, 255, 255, 0.6);
 }
-.input-mail:focus-within {
+.form-mail__input:focus-within {
   border-color: #2196f3;
 }
 
-.input-mail:focus-within {
+.form-mail__input:focus-within {
   color: rgba(255, 255, 255, 0.6);
   border-color: #2196f3;
 }
