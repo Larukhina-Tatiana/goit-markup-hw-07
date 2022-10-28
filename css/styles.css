@@ -64,6 +64,15 @@ img {
   display: block;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.no-padding {
+  padding: 0;
+}
+
 .header {
   border-bottom: 1px solid var(--borders-color);
 }
@@ -75,13 +84,6 @@ img {
   padding: 0 15px;
 }
 
-/* Для расположения меню по центру */
-.flex-container,
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 /* Для ссылок падинги  .link*/
 .nav__link,
@@ -91,10 +93,6 @@ img {
   padding-bottom: 32px;
 }
 
-/* Отступ от логотипа */
-.nav-list {
-  margin-left: 93px;
-}
 
 /* Ссылка-Логотип  */
 .logo {
@@ -117,8 +115,7 @@ img {
 
 
 /* Меню навигации */
-.nav__link,
-.nav-contacts {
+.nav__link {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -128,13 +125,6 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-/* 
-.flex > .item + .item {
-  margin-left: 50px;
-} */
-
-/* Не работает */
 
 .nav__list {
   gap: 50px;
@@ -261,7 +251,7 @@ img {
 }
 
 .button:active,
-.btn-footer-send:active {
+.btn-send:active {
   background: var(--hero-button-active);
 }
 
@@ -298,9 +288,9 @@ img {
 
 .features-list {
   display: flex;
-    padding-bottom: 0;
-    align-items: normal;
-    justify-content: space-between;
+  padding-bottom: 0;
+  align-items: normal;
+  justify-content: space-between;
 
 }
 
@@ -430,10 +420,10 @@ img {
   gap: 10px;
 }
 /* Объединение для выравнивания */
-.content {
+/* .content {
   margin-top: 30px;
   margin-bottom: 30px;
-}
+} */
 
 /* Соцсети  Наша команда*/
 .social-list__link {
@@ -455,15 +445,8 @@ img {
 
 .social-list__link--bg {
   background-color: rgba(255, 255, 255, 0.1);
-
-  /* transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
-/* .footer-social-link:hover,
-.footer-social-link:focus {
-  background-color: var(--accent-color);
-} */
+
 .social-list__link:hover,
 .social-list__link:focus {
   background-color: var(--accent-color);
@@ -548,7 +531,7 @@ img {
   margin-top: 20px;
 }
 
-.address__item--margin {
+.address__item--margin-top {
   margin-top: 9px;
 }
 .address__link {
@@ -585,10 +568,10 @@ img {
 
 /* Форма  Підпишіться на розсилку*/
 
-.footer-form-mail {
+/* .form-mail {
   width: 570px;
   line-height: calc(20 / 16);
-}
+} */
 
 .form-mail:hover .input-mail,
 .form-mail:focus .input-mail {
@@ -623,20 +606,20 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-footer-send {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.btn-send {
+  display: inherit;
   width: 200px;
   height: 50px;
+  color: var(--white);
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  
 }
-
-.send-text {
+.btn-send__text {
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
@@ -645,7 +628,7 @@ img {
   color: var(--page-background);
 }
 
-.btn-footer-send__icon {
+.btn-send__icon {
   fill: var(--page-background);
   margin-left: 10px;
 }
@@ -738,7 +721,7 @@ img {
     box-shadow: var(--portfolio-box-shadow);
 } */
 /* flex-container */
-.flex-container {
+.projects {
   flex-wrap: wrap;
   /* margin: -15px; */
 }
@@ -772,7 +755,7 @@ img {
   line-height: 1.87;
 }
 
-.project {
+.projects__item {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
@@ -782,20 +765,20 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project:hover,
-.project:focus {
+.projects__item:hover,
+.projects__item:focus {
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* Каждый третий */
-.project:nth-child(3n) {
+.projects__item:nth-child(3n) {
   margin-right: 0;
 }
 
 /* Последние 3 элемента */
-.project:nth-last-child(-n + 3) {
+.projects__item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 
@@ -807,12 +790,8 @@ img {
   align-items: baseline;
 }
 
-.footer-social-list {
-  gap: 10px;
-}
-.no-padding {
-  padding: 0;
-}
+
+
 
 /* Модалка */
 .is-hidden {
@@ -867,7 +846,7 @@ img {
 }
 
 /* Выравнивание кнопки относительно мод.окна */
-.modal-close-btn {
+.close-btn {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -881,15 +860,15 @@ img {
   border-radius: 50%;
 }
 
-.close-icon {
+.close-btn__icon {
   fill: var(--logo-header);
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
-.modal-close-btn:hover .close-icon,
-.modal-close-btn:focus .close-icon {
+.close-btn:hover .close-btn__icon,
+.close-btn:focus .close-btn__icon {
   fill: var(--accent-color);
   cursor: pointer;
 }
@@ -900,13 +879,13 @@ img {
 
 
 /* Форма модалки */
-.user-contscts {
+.form {
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
 }
 
-.form-title {
+.form__title {
   font-weight: 700;
   font-size: 20px;
   line-height: calc(23 / 20);
@@ -915,14 +894,14 @@ img {
   margin-bottom: 12px;
 }
 
-.modal-label {
+.form__label {
   display: block;
   margin: 12px auto 4px;
   /* color: var(--); */
   
 }
 
-.modal-input {
+.form__input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
@@ -937,13 +916,13 @@ img {
   width: 100%;
 }
 
-.label-icon-wrap {
+.form__icon-wrap {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.forms-icon {
+.form__icon {
   position: absolute;
   left: 12px;
   fill: var(--logo-header);
@@ -972,42 +951,41 @@ img {
   height: 96px;
 }
 
-.modal-input:hover, .modal-input:focus {
+.form__input:hover, .form__input:focus {
   border: 1px solid var(--accent-color);
 }
 
-.modal-input:hover + .forms-icon,
-.modal-input:focus + .forms-icon {
+.form__input:hover + .form__icon,
+.form__input:focus + .form__icon {
   fill: var(--accent-color);
 }
 
-.modal-button {
+/* .modal-button { */
+  .btn-send--for-modal{
   padding: 0;
   margin-top: 30px;
-  display: inherit;
+  /* display: inherit; */
   margin-left: auto;
   margin-right: auto;
   width: 200px;
   height: 50px;
   color: var(--white);
   background: var(--accent-color);
-  border: none;
-  cursor: pointer;
-
+  
   transition-property: background;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-button:hover,
-.modal-button:focus {
+.btn-send--for-modal:hover,
+.btn-send--for-modal:focus {
   background: var(--hero-button-active);
 }
 
 
 /* checkbox */
 
-.checkbox-label {
+.checkbox__label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1024,16 +1002,17 @@ img {
 
 }
 
-.checkbox-label a {
+.checkbox__link {
+  text-decoration: underline;
   color: var(--accent-color);
  
 }
-.checkbox-text {
+.checkbox__text {
   font-size: 14px;
   line-height: calc(24/14);
   }
 
-.castom-checkbox-icon {
+.checkbox__castom-icon {
   position: relative;
   display: flex;
   justify-content: center;
@@ -1048,7 +1027,7 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-check {
+.checkbox__icon-check {
   opacity: 0;
   transition-property: opacity;
   transition-duration: 250ms;
@@ -1057,12 +1036,12 @@ img {
   
 }
 
-.checkbox:checked + .checkbox-label .castom-checkbox-icon {
+.checkbox:checked + .checkbox__label .checkbox__castom-icon {
   background: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.checkbox:checked + .checkbox-label .castom-checkbox-icon .icon-check{
+.checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check{
   opacity: 1;
 }
 
