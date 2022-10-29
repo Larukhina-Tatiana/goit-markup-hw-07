@@ -1,0 +1,25 @@
+
+@import "../sass/utils/modern-normalize.min.css";
+@import "../sass/utils/vars.scss";
+@import "../sass/utils/utils.scss";
+@import "../sass/utils/_mixin";
+@import "../sass/components/_nav";
+@import "../sass/components/_contacts-list";
+.header {
+    border-bottom: 1px solid $borders-color;
+
+    &__logo {
+        color: $logo-header;
+    }
+}
+
+/* Ссылка-Логотип  */
+.logo {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.22;
+    color: $accent-color;
+    display: inline-block;
+}
+
