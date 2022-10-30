@@ -1,5 +1,3 @@
-@charset "UTF-8";
-@import "../sass/utils/modern-normalize.min.css";
 h1,
 h2,
 h3,
@@ -32,7 +30,7 @@ ul {
   padding: 0;
 }
 
-list {
+.list {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -42,7 +40,19 @@ list {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  border: 1px solid green;
+}
+
+.logo {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.22;
+  color: #2196f3;
+  display: inline-block;
+}
+
+.header__logo {
+  color: #000000;
 }
 
 .nav {
@@ -93,9 +103,9 @@ list {
 }
 
 .contacts-list__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -108,23 +118,53 @@ list {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contacts-list__link--accent, .contacts-list__link:hover, .contacts-list__link:focus {
+.contacts-list__link:hover, .contacts-list__link:focus {
   color: #2196f3;
+}
+.contacts-list__link__icon {
+  color: #757575;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-list__link:hover .contacts-list__icon, .contacts-list__link:focus .contacts-list__icon {
+  fill: #2196f3;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  background-color: var(--page-background);
+  color: var(--priority-text-color);
 }
 
 .header {
   border-bottom: 1px solid #ececec;
 }
-.header__logo {
-  color: #000000;
-}
 
-/* Ссылка-Логотип  */
-.logo {
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.22;
-  color: #2196f3;
-  display: inline-block;
+.hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: #c4c4c4;
+  background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/icons/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero__title {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
 }/*# sourceMappingURL=main.css.map */

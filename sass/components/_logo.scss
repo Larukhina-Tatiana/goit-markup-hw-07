@@ -1,0 +1,11 @@
+.logo {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.22;
+    color: $accent-color;
+    display: inline-block;
+}
+.header__logo {
+    color: $logo-header;
+}

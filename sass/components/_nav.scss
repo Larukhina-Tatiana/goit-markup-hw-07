@@ -23,6 +23,7 @@
     &--active,
     &--accent:hover,
     &--accent:focus {
+      // @extend .nav__link ;
       color: $accent-color;
     }
 

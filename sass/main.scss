@@ -1,25 +1,50 @@
-
-@import "../sass/utils/modern-normalize.min.css";
 @import "../sass/utils/vars.scss";
 @import "../sass/utils/utils.scss";
 @import "../sass/utils/_mixin";
-@import "../sass/components/_nav";
+@import "../sass/components/_logo";
+@import "../sass/components/nav";
 @import "../sass/components/_contacts-list";
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    background-color: var(--page-background);
+    color: var(--priority-text-color);
+
+}
+
 .header {
     border-bottom: 1px solid $borders-color;
+}
 
-    &__logo {
-        color: $logo-header;
+.hero {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-color: $bg-img;
+    background: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/icons/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__title {
+        width: 696px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $hero;
     }
 }
-
-/* Ссылка-Логотип  */
-.logo {
-    font-family: "Raleway";
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.22;
-    color: $accent-color;
-    display: inline-block;
-}
-
