@@ -65,6 +65,7 @@
     &:hover &__icon,
     &:focus &__icon {
         fill: $accent-color;
+        @include transition ($transition-property: fill);
 
     }
 }
