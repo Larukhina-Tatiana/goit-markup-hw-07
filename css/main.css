@@ -168,9 +168,6 @@ ul {
 .social-list__link {
   width: 44px;
   height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 50%;
   background: #ffffff;
   transition-duration: 250ms;
@@ -184,7 +181,6 @@ ul {
 }
 .social-list__svg {
   fill: #afb1b8;
-  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -529,6 +525,12 @@ ul {
   height: 40px;
   width: 100%;
 }
+.form__input:hover, .form__input:focus {
+  border: 1px solid #2196f3;
+}
+.form__input:hover + .form__icon, .form__input:focus + .form__icon {
+  fill: #2196f3;
+}
 .form #comment {
   font-family: "Roboto";
   padding-left: 16px;
@@ -703,8 +705,11 @@ ul {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
   font-size: 14px;
+  line-height: 1.7142857143;
   letter-spacing: 0.03em;
   background-color: #ffffff;
   color: #757575;

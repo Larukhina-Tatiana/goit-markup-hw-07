@@ -8,7 +8,6 @@
     z-index: 1;
 
     @include transition ((opaciti, visibility));
-    // transition-property: opaciti, visibility;
     backdrop-filter: blur(10px);
 }
 
@@ -102,6 +101,17 @@
         width: 100%;
     }
 
+    &__input:hover,
+    &__input:focus {
+        border: 1px solid $accent-color;
+    }
+
+    &__input:hover + &__icon,
+&__input:focus + &__icon {
+  fill: $accent-color;
+}
+
+
     #comment {
         font-family: 'Roboto';
         padding-left: 16px;
@@ -182,7 +192,5 @@
 
         @include transition ($transition-property: background);
     }
-
-
 
 }
