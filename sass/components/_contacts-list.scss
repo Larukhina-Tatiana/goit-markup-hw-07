@@ -1,12 +1,12 @@
 .contacts-list {
     margin-left: auto;
-    gap: 30px;
+    // gap: 30px;
 }
 
 .contacts-list__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+    // display: inline-flex;
+    // align-items: center;
+    // gap: 10px;
     @include font-style($font-weight: 500, $letter-spacing: 0.02em, $color: $priority-text-color);
     @include transition($transition-property: color);
 

@@ -5,11 +5,13 @@
 .team-list {
     justify-content: space-between;
 
+
     &__item {
         width: 270px;
         background: $page-background;
         box-shadow: $team-box-shadow;
         border-radius: 0px 0px 4px 4px;
+        margin-bottom: 30px;
     }
 
     &__caption {
@@ -21,14 +23,14 @@
         margin-bottom: 10px;
         font-weight: 500;
         font-size: 16px;
-        line-height: 1.19;
+        line-height: calc(19/16);
         text-align: center;
         color: $title-text-color;
     }
 
     &__text {
         font-size: 16px;
-        line-height: 1.19;
+        line-height: calc(19/16);
         text-align: center;
         margin-bottom: 16px;
     }

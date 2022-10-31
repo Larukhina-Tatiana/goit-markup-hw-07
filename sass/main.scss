@@ -1,56 +1,16 @@
 @import "../sass/utils/vars.scss";
 @import "../sass/utils/utils.scss";
 @import "../sass/utils/_mixin";
+@import "../sass/components/_container";
+@import "../sass/components/_general";
+@import "../sass/components/_header";
 @import "../sass/components/_logo";
-@import "../sass/components/nav";
-@import "../sass/components/_contacts-list";
-@import "../sass/components/_social-ilst";
+@import "../sass/components/_nav";
 @import "../sass/components/_features";
 @import "../sass/components/_team";
+@import "../sass/components/_social-list";
 @import "../sass/components/_clients";
 @import "../sass/components/_footer";
 @import "../sass/components/_form-mail";
-@import "../sass/components/_button";
 @import "../sass/components/_modal";
-@import "../sass/components/_portfolio-btn";
-@import "../sass/components/_projects";
-
-body {
-    @include font-style ($font-family: 'Roboto', $font-weight: 400, $font-size: 14px, $line-height: calc(24/14),$letter-spacing:0.03em, $background-color: $page-background, $color: $priority-text-color)
-    
-}
-
-.header {
-    border-bottom: 1px solid $borders-color;
-}
-
-.hero {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
-
-    background-color: $bg-img;
-    background: linear-gradient(to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url(../images/icons/hero.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    &__title {
-        width: 696px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-        font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: $hero;
-    }
-}
+@import "../sass/components/_button";
