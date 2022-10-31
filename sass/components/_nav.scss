@@ -17,13 +17,11 @@
     padding-top: 32px;
     padding-bottom: 32px;
     
-    transition-property: color;
-    @include transition();
+    @include transition($transition-property: color);
     
     &--active,
     &--accent:hover,
     &--accent:focus {
-      // @extend .nav__link ;
       color: $accent-color;
     }
 

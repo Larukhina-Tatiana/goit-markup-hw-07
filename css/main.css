@@ -68,15 +68,24 @@ ul {
 
 .logo {
   font-family: "Raleway";
+  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.22;
+  letter-spacing: 0.03em;
+  background-color: #ffffff;
   color: #2196f3;
   display: inline-block;
+  background: none;
 }
 
 .header__logo {
   color: #000000;
+}
+
+.footer__logo {
+  color: #ffffff;
+  background: #2f303a;
 }
 
 .nav {
@@ -91,7 +100,7 @@ ul {
   position: relative;
 }
 .nav__link {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -102,7 +111,6 @@ ul {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -130,7 +138,7 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -138,7 +146,6 @@ ul {
   letter-spacing: 0.02em;
   background-color: #ffffff;
   color: #757575;
-  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -147,7 +154,6 @@ ul {
 }
 .contacts-list__link__icon {
   color: #757575;
-  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -297,7 +303,6 @@ ul {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition-property: border, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -309,7 +314,6 @@ ul {
 }
 .clients-list__icon {
   fill: #afb1b8;
-  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -324,9 +328,6 @@ ul {
   justify-content: left;
   gap: 70px;
   align-items: baseline;
-}
-.footer__logo {
-  color: #ffffff;
 }
 .footer__text {
   font-weight: 700;
@@ -346,11 +347,9 @@ ul {
   font-style: normal;
   line-height: 1.7;
   color: #ffffff;
-  text-decoration: none;
 }
 .address__link--color {
   color: rgba(255, 255, 255, 0.6);
-  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -361,7 +360,7 @@ ul {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  background-color: var(--hero-footer-background);
+  background-color: #2f303a;
   margin-right: 12px;
   padding-left: 16px;
   color: rgba(255, 255, 255, 0.6);
@@ -378,10 +377,14 @@ ul {
   min-width: 216px;
   display: inline-block;
   padding: 10px 32px;
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  background-color: #ffffff;
+  color: #757575;
   color: #ffffff;
   border-radius: 4px;
   background-color: #2196f3;
@@ -414,7 +417,6 @@ ul {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  color: #ffffff;
 }
 .btn-send__icon {
   fill: #ffffff;
@@ -430,7 +432,6 @@ ul {
   height: 50px;
   color: #ffffff;
   background: #2196f3;
-  transition-property: background;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -671,13 +672,9 @@ ul {
   position: absolute;
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   left: 0;
   top: 0;
   transition-duration: 250ms;
-  transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(calc(100% + 1px));
   /* transform: translateY(100%); */
@@ -685,7 +682,7 @@ ul {
   line-height: 1.5555555556;
   padding: 63px 24px;
   color: #ffffff;
-  background-color: rgba(33, 150, 243, 0.9);
+  background-color: #2196f3;
 }
 .project__caption {
   padding: 20px 24px;

@@ -6,10 +6,7 @@
         height: 92px;
         border: 1px solid $clients;
         border-radius: 4px;
-
-        transition-property: border, fill;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transition ($transition-property: (border, fill));
     }
 
     &__link:hover &__icon,
@@ -24,10 +21,7 @@
 
     &__icon {
         fill: $clients;
-
-        transition-property: fill;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transition ($transition-property: (border, fill));
     }
 
 }

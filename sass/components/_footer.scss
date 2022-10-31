@@ -10,18 +10,19 @@
         align-items: baseline;
     }
 
-    &__logo {
-        color: $logo-footer;
-    }
+    // &__logo {
+    //     color: $logo-footer;
+    //     background:$hero-footer-background;
+    // }
 
     &__text {
         font-weight: 700;
         line-height: calc(16 / 14);
         text-transform: uppercase;
         color: $hero;
-      
+
         margin-bottom: 20px;
-      }
+    }
 }
 
 .address {
@@ -35,14 +36,11 @@
         font-style: normal;
         line-height: 1.7;
         color: $logo-footer;
-        text-decoration: none;
+
 
         &--color {
             color: $address-color;
-
-            transition-property: color;
-            transition-duration: 250ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            @include transition ($transition-property: color);
         }
     }
 }

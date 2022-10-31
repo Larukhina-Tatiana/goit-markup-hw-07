@@ -5,11 +5,7 @@
   &__link {
     width: 44px;
     height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 50%;
-
     background: $page-background;
     @include transition($transition-property: background);
   }
@@ -25,8 +21,6 @@
 
   &__svg {
     fill: $clients;
-
-    transition-property: fill;
     @include transition($transition-property: fill);
   }
 

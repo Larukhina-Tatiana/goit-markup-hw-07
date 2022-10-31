@@ -7,10 +7,8 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-
-    @include font-style($font-weight: 500, $letter-spacing: 0.02em, $color: #757575);
-    transition-property: color;
-    @include transition();
+    @include font-style($font-weight: 500, $letter-spacing: 0.02em, $color: $priority-text-color);
+    @include transition($transition-property: color);
 
     &:hover,
     &:focus {
@@ -18,9 +16,8 @@
     }
 
     &__icon {
-        color: #757575;
-        transition-property: color;
-        @include transition();
+        color: $priority-text-color;
+        @include transition($transition-property: color);
     }
 
     &:hover .contacts-list__icon,
