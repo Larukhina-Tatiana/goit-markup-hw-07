@@ -15,7 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
@@ -78,19 +78,19 @@
           <!--Меню filters -->
 
           <ul class="buttons flex btn-flex">
-            <li class="item">
+            <li class="buttons__item">
               <button class="portfolio-button" type="button">Усі</button>
             </li>
-            <li class="item">
+            <li class="buttons__item">
               <button class="portfolio-button" type="button">Веб-сайти</button>
             </li>
-            <li class="item">
+            <li class="buttons__item">
               <button class="portfolio-button" type="button">Додатки</button>
             </li>
-            <li class="item">
+            <li class="buttons__item">
               <button class="portfolio-button" type="button">Дизайн</button>
             </li>
-            <li class="item">
+            <li class="buttons__item">
               <button class="portfolio-button" type="button">Маркетинг</button>
             </li>
           </ul>
@@ -327,7 +327,7 @@
             </li>
 
             <li class="project__item">
-              <a class="project-link" href="">
+              <a class="project__link" href="">
                 <div class="project__description-container">
                   <img
                     class="project__img"
@@ -361,86 +361,56 @@
     </main>
     <!-- Подвал -->
     <footer class="footer">
-      <div class="container">
+      <div class="container footer__container">
         <div class="fotter__wrapper">
-          <a class="logo" href="./index.html" lang="en"
-            >Web<span class="logo footer__logo">Studio</span></a
-          >
+          <a class="logo" href="./index.html" lang="en">Web<span class="footer__logo">Studio</span></a>
           <address class="address">
             <ul class="address__list">
               <li class="address__item">
-                <a
-                  class="address__link"
-                  href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
+                <a class="address__link" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
+                  rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі Українки, 26</a>
               </li>
               <li class="address__item address__item--margin-top">
-                <a
-                  class="address__link address__link--color"
-                  href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
+                <a class="address__link address__link--color" href="mailto:info@devstudio.com">info@devstudio.com</a>
               </li>
               <li class="address__item address__item--margin-top">
-                <a
-                  class="address__link address__link--color"
-                  href="tel:+380961111111"
-                  >+38 096 111 11 11</a
-                >
+                <a class="address__link address__link--color" href="tel:+380961111111">+38 096 111 11 11</a>
               </li>
             </ul>
           </address>
         </div>
-
+  
         <!-- Приєднуйтесь -->
-
+  
         <div class="fotter__wrapper">
           <p class="footer__text">Приєднуйтесь</p>
-
+  
           <ul class="social-list flex">
+  
             <li class="social-list__ltem">
-              <a
-                class="social-list__link social-list__link--bg"
-                href=""
-                aria-label="Instagram Link"
-              >
+              <a class="social-list__link social-list__link--bg" href="" aria-label="Instagram Link">
                 <svg width="20" height="20">
                   <use href="./images/icons/icons.svg#icon-instagram-w"></use>
                 </svg>
               </a>
             </li>
-
+  
             <li class="social-list__ltem">
-              <a
-                class="social-list__link social-list__link--bg"
-                href=""
-                aria-label="Twitter Link"
-              >
+              <a class="social-list__link social-list__link--bg" href="" aria-label="Twitter Link">
                 <svg width="20" height="20">
                   <use href="./images/icons/icons.svg#icon-twitter-w"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__ltem">
-              <a
-                class="social-list__link social-list__link--bg"
-                href=""
-                aria-label="Facebook Link"
-              >
+              <a class="social-list__link social-list__link--bg" href="" aria-label="Facebook Link">
                 <svg width="20" height="20">
                   <use href="./images/icons/icons.svg#icon-facebook-w"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__ltem">
-              <a
-                class="social-list__link social-list__link--bg"
-                href=""
-                aria-label="Linkedin Link"
-              >
+              <a class="social-list__link social-list__link--bg" href="" aria-label="Linkedin Link">
                 <svg width="20" height="20">
                   <use href="./images/icons/icons.svg#icon-linkedin-w"></use>
                 </svg>
@@ -448,23 +418,17 @@
             </li>
           </ul>
         </div>
-
+  
         <div class="fotter_wrapper">
           <p class="footer__text">Підпишіться на розсилку</p>
-
-          <form class="form-mail flex" name="footer-mail" novalidate>
+            <!-- Форма с email -->
+  
+          <form class="form-mail flex" name="footer-mail"  novalidate>
             <label class="form-mail__label" for="user_email"></label>
-            <input
-              class="form-mail__input"
-              type="email"
-              name="email"
-              id="user_email"
-              placeholder="E-mail"
-              required
-            />
-
-            <button class="btn-send flex" type="submit">
-              <span class="btn-send__text"> Підписатися</span>
+            <input class="form-mail__input" type="email" name="email" id="user_email" placeholder="E-mail" required>
+  
+            <button class="button btn-send flex" type="submit"><span class="btn-send__text">
+                Підписатися</span>
               <svg class="btn-send__icon" width="24" height="24">
                 <use href="./images/icons/icons.svg#icon-icon-send"></use>
               </svg>

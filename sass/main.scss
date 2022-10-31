@@ -5,14 +5,22 @@
 @import "../sass/components/nav";
 @import "../sass/components/_contacts-list";
 @import "../sass/components/_sections";
-
+@import "../sass/components/_social-ilst";
+@import "../sass/components/_features";
+@import "../sass/components/_team";
+@import "../sass/components/_clients";
+@import "../sass/components/_footer";
+@import "../sass/components/_form-mail";
+@import "../sass/components/_button";
+@import "../sass/components/_modal";
+@import "../sass/components/_portfolio-btn";
+@import "../sass/components/_projects";
 body {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     letter-spacing: 0.03em;
-    background-color: var(--page-background);
-    color: var(--priority-text-color);
-
+    background-color: $page-background;
+    color: $priority-text-color;
 }
 
 .header {
